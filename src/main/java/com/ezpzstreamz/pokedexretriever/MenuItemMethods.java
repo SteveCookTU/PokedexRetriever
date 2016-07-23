@@ -2722,6 +2722,64 @@ class MenuItemMethods {
     }
     //endregion
 
+    //region Utilities
+    public static void getLanguages() {
+        System.out.print("Enter a language ID or 'all' to list: ");
+        String input = PokedexRetriever.getScanner().nextLine();
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+            PokedexRetriever.clearConsole();
+            System.out.print("Enter a language ID or 'all' to list: ");
+            input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (!input.equalsIgnoreCase("back")) {
+            if (input.equalsIgnoreCase("all")) {
+                PokedexRetriever.clearConsole();
+                boolean success = false;
+                while (!success) {
+                    try {
+                        System.out.println("Retrieving data...");
+                        String data = namedApiResourcesToString(PokedexRetriever.getApi().getLanguageList(0, 15).getResults(), true);
+                        PokedexRetriever.clearConsole();
+                        System.out.println(data);
+                        success = true;
+                    } catch (Exception e) {
+                        PokedexRetriever.clearConsole();
+                        if (!(e.getCause() instanceof EOFException)) {
+                            System.out.println("An error occurred retrieving the data: " + e.getCause() + ". Retrying...");
+                        }
+                    }
+                }
+                getLanguages();
+            } else if (PokedexRetriever.isInt(input)) {
+                PokedexRetriever.clearConsole();
+                boolean success = false;
+                while (!success) {
+                    try {
+                        System.out.println("Retrieving data...");
+                        Language language = PokedexRetriever.getApi().getLanguage(Integer.parseInt(input));
+                        PokedexRetriever.clearConsole();
+                        System.out.println(
+                                "ID: " + language.getId() + "\n" +
+                                        "Name: " + language.getName() + "\n" +
+                                        "Official: " + language.getOfficial() + "\n" +
+                                        "Iso639: " + language.getIso639() + "\n" +
+                                        "Iso3166: " + language.getIso3166() + "\n" +
+                                        "Names: " + namesToString(language.getNames()));
+                        success = true;
+                    } catch (Exception e) {
+                        PokedexRetriever.clearConsole();
+                        if (!(e.getCause() instanceof EOFException)) {
+                            System.out.println("An error occurred retrieving the data: " + e.getCause() + ". Retrying...");
+                        }
+                    }
+                }
+                getLanguages();
+            }
+        }
+        PokedexRetriever.setInput("back");
+    }
+    //endregion
+
     private static String berryFlavorMapsToString(List<BerryFlavorMap> maps) {
         String response = "\n";
         for (BerryFlavorMap map : maps) {
