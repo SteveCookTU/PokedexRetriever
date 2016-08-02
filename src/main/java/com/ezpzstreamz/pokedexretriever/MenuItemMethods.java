@@ -15,10 +15,14 @@ class MenuItemMethods {
     public static void getBerries() {
         System.out.print("Enter a berry ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a berry ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -76,10 +80,14 @@ class MenuItemMethods {
     public static void getBerryFirmness() {
         System.out.print("Enter a berry firmness ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a berry firmness ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -130,10 +138,14 @@ class MenuItemMethods {
     public static void getFlavors() {
         System.out.print("Enter a flavor ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a flavor ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -187,10 +199,14 @@ class MenuItemMethods {
     public static void getContestTypes() {
         System.out.print("Enter a contest type ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a contest type ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -241,10 +257,14 @@ class MenuItemMethods {
     public static void getContestEffects() {
         System.out.print("Enter a contest effect ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a contest effect ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -296,10 +316,14 @@ class MenuItemMethods {
     public static void getSuperContestEffects() {
         System.out.print("Enter a super contest effect ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a super contest effect ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -353,11 +377,16 @@ class MenuItemMethods {
     public static void getEncounterMethods() {
         System.out.print("Enter an encounter method ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an encounter method ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
         }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
+        }
+
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
                 PokedexRetriever.clearConsole();
@@ -407,10 +436,14 @@ class MenuItemMethods {
     public static void getEncounterConditions() {
         System.out.print("Enter an encounter condition ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an encounter condition ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -461,10 +494,14 @@ class MenuItemMethods {
     public static void getEncounterConditionValues() {
         System.out.print("Enter an encounter condition value ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an encounter condition value ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -517,10 +554,14 @@ class MenuItemMethods {
     public static void getEvolutionChains() {
         System.out.print("Enter an evolution chain ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an evolution chain ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -574,10 +615,14 @@ class MenuItemMethods {
     public static void getEvolutionTriggers() {
         System.out.print("Enter an evolution trigger ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an evolution trigger ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -630,10 +675,14 @@ class MenuItemMethods {
     public static void getGenerations() {
         System.out.print("Enter a generation ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a generation ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -689,10 +738,14 @@ class MenuItemMethods {
     public static void getPokedexes() {
         System.out.print("Enter a pokedex ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokedex ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -751,10 +804,14 @@ class MenuItemMethods {
     public static void getVersions() {
         System.out.print("Enter a version ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a version ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -805,10 +862,14 @@ class MenuItemMethods {
     public static void getVersionGroups() {
         System.out.print("Enter a version group ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a version group ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -865,10 +926,14 @@ class MenuItemMethods {
     public static void getItems() {
         System.out.print("Enter an item ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an item ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -941,10 +1006,14 @@ class MenuItemMethods {
     public static void getItemAttributes() {
         System.out.print("Enter an item attribute ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an item attribute ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -996,10 +1065,14 @@ class MenuItemMethods {
     public static void getItemCategories() {
         System.out.print("Enter an item category ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an item category ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1051,10 +1124,14 @@ class MenuItemMethods {
     public static void getItemFlingEffects() {
         System.out.print("Enter an item fling effect ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an item fling effect ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1105,10 +1182,14 @@ class MenuItemMethods {
     public static void getItemPockets() {
         System.out.print("Enter an item fling effect ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an item fling effect ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1168,10 +1249,14 @@ class MenuItemMethods {
     public static void getMoves() {
         System.out.print("Enter a move ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1259,10 +1344,14 @@ class MenuItemMethods {
     public static void getMoveAilments() {
         System.out.print("Enter a move ailment ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move ailment ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1313,10 +1402,14 @@ class MenuItemMethods {
     public static void getMoveBattleStyles() {
         System.out.print("Enter a move battle style ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move battle style ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1366,10 +1459,14 @@ class MenuItemMethods {
     public static void getMoveCategories() {
         System.out.print("Enter a move category ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move category ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1420,10 +1517,14 @@ class MenuItemMethods {
     public static void getMoveDamageClasses() {
         System.out.print("Enter a move damage class ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move damage class ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1475,10 +1576,14 @@ class MenuItemMethods {
     public static void getMoveLearnMethods() {
         System.out.print("Enter a move learn method ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move learn method ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1530,10 +1635,14 @@ class MenuItemMethods {
     public static void getMoveTargets() {
         System.out.print("Enter a move target ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a move target ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1587,10 +1696,14 @@ class MenuItemMethods {
     public static void getLocations() {
         System.out.print("Enter a location ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a location ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1643,10 +1756,14 @@ class MenuItemMethods {
     public static void getLocationAreas() {
         System.out.print("Enter a location area ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a location area ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1700,10 +1817,14 @@ class MenuItemMethods {
     public static void getPalParkAreas() {
         System.out.print("Enter a pal park area ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pal park area ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1754,10 +1875,14 @@ class MenuItemMethods {
     public static void getRegions() {
         System.out.print("Enter a region ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a region ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1813,10 +1938,14 @@ class MenuItemMethods {
     public static void getAbilities() {
         System.out.print("Enter an ability ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an ability ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1871,10 +2000,14 @@ class MenuItemMethods {
     public static void getCharacteristics() {
         System.out.print("Enter a characteristic ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a characteristic ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1925,10 +2058,14 @@ class MenuItemMethods {
     public static void getEggGroups() {
         System.out.print("Enter an egg group ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter an egg group ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -1979,10 +2116,14 @@ class MenuItemMethods {
     public static void getGenders() {
         System.out.print("Enter a gender ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a gender ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2033,10 +2174,14 @@ class MenuItemMethods {
     public static void getGrowthRates() {
         System.out.print("Enter a growth rate ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a growth rate ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2089,10 +2234,14 @@ class MenuItemMethods {
     public static void getNatures() {
         System.out.print("Enter a nature ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a nature ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2164,10 +2313,14 @@ class MenuItemMethods {
     public static void getPokeathlonStats() {
         System.out.print("Enter a pokeathlon stat ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokeathlon stat ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2218,10 +2371,14 @@ class MenuItemMethods {
     public static void getPokemon() {
         System.out.print("Enter a pokemon ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokemon ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2288,10 +2445,14 @@ class MenuItemMethods {
     public static void getPokemonColors() {
         System.out.print("Enter a pokemon color ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokemon color ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2342,10 +2503,14 @@ class MenuItemMethods {
     public static void getPokemonForms() {
         System.out.print("Enter a pokemon form ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokemon form ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2403,10 +2568,14 @@ class MenuItemMethods {
     public static void getPokemonHabitats() {
         System.out.print("Enter a pokemon habitat ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokemon habitat ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2457,10 +2626,14 @@ class MenuItemMethods {
     public static void getPokemonShapes() {
         System.out.print("Enter a pokemon shape ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokemon shape ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2512,10 +2685,14 @@ class MenuItemMethods {
     public static void getPokemonSpecies() {
         System.out.print("Enter a pokemon species ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a pokemon species ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2590,10 +2767,14 @@ class MenuItemMethods {
     public static void getStats() {
         System.out.print("Enter a stat ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a stat ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2661,10 +2842,14 @@ class MenuItemMethods {
     public static void getTypes() {
         System.out.print("Enter a type ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a type ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -2694,14 +2879,14 @@ class MenuItemMethods {
                         Type type = PokedexRetriever.getApi().getType(Integer.parseInt(input));
                         PokedexRetriever.clearConsole();
                         String moveDamageClass = "none\n";
-                        if(type.getMoveDamageClass() != null) {
+                        if (type.getMoveDamageClass() != null) {
                             moveDamageClass = namedApiResourcesToString(Arrays.asList(type.getMoveDamageClass()), false);
                         }
                         System.out.println(
                                 "ID: " + type.getId() + "\n" +
                                         "Name: " + type.getName() + "\n" +
                                         "Damage Relations: " + typeRelationsToString(type.getDamageRelations()) +
-                                        "Game Indicies: "+ generationGameIndiciesToString(type.getGameIndices()) +
+                                        "Game Indicies: " + generationGameIndiciesToString(type.getGameIndices()) +
                                         "Generation: " + namedApiResourcesToString(Arrays.asList(type.getGeneration()), false) +
                                         "Move Damage Class: " + moveDamageClass +
                                         "Names: " + namesToString(type.getNames()) +
@@ -2726,10 +2911,14 @@ class MenuItemMethods {
     public static void getLanguages() {
         System.out.print("Enter a language ID or 'all' to list: ");
         String input = PokedexRetriever.getScanner().nextLine();
-        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back")) {
+        while (!input.equalsIgnoreCase("all") && !PokedexRetriever.isInt(input) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit")) {
             PokedexRetriever.clearConsole();
             System.out.print("Enter a language ID or 'all' to list: ");
             input = PokedexRetriever.getScanner().nextLine();
+        }
+        if (input.equalsIgnoreCase("exit")) {
+            PokedexRetriever.setInput("exit");
+            return;
         }
         if (!input.equalsIgnoreCase("back")) {
             if (input.equalsIgnoreCase("all")) {
@@ -3396,7 +3585,7 @@ class MenuItemMethods {
 
     private static String typePokemonToString(List<TypePokemon> pokemon) {
         String response = "\n";
-        for(TypePokemon poke : pokemon) {
+        for (TypePokemon poke : pokemon) {
             response += "\n\tSlot: " + poke.getSlot() + "\n" +
                     "\tPokemon: \n\t\t" + namedApiResourcesToString(Arrays.asList(poke.getPokemon()), true).replace("\n", "\n\t\t").trim() + "\n";
         }

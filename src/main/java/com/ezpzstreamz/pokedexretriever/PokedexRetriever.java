@@ -21,16 +21,6 @@ class PokedexRetriever {
     public static void main(String[] args) {
         pokeApi = new PokeApiClient();
         kb = new Scanner(System.in);
-        /*for (NamedApiResource vGroup : pokeApi.getVersionGroupList(0, 16).getResults()) {
-            System.out.println(vGroup.getId() + ": " + vGroup.getName());
-        }
-        System.out.print("Select a pokemon game version: ");
-        input = kb.nextLine();
-        while (!isInt(input) || Integer.parseInt(input) < 1 || Integer.parseInt(input) > 16) {
-            System.out.print("Select a pokemon game version: ");
-            input = kb.nextLine();
-        }
-        version = pokeApi.getVersionGroup(Integer.parseInt(input));*/
         fillMenus();
         displayCurrentMenu();
         clearConsole();
@@ -64,11 +54,11 @@ class PokedexRetriever {
                 System.out.print(current + "Please select a menu item by number: ");
                 input = kb.nextLine();
             }
-            while ((!isInt(input) || Integer.parseInt(input) < 1 || Integer.parseInt(input) > current.size() - 1) && !input.equalsIgnoreCase("back"));
+            while ((!isInt(input) || Integer.parseInt(input) < 1 || Integer.parseInt(input) > current.size() - 1) && !input.equalsIgnoreCase("back") && !input.equalsIgnoreCase("exit"));
             if (input.equalsIgnoreCase("back")) {
                 current = main;
                 displayCurrentMenu();
-            } else {
+            } else if(!input.equalsIgnoreCase("exit")) {
                 clearConsole();
                 loadMenuOption();
                 displayCurrentMenu();
