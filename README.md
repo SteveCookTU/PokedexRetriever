@@ -6,7 +6,7 @@ Thank you for checking out my PokedexRetriever program for retrieving from the h
 ## Navigation
 Typing back will bring you to the previous menu.
 
-Typing exit at the main menu will safely exit the program.
+Typing exit will safely exit the program.
 
 # Contributions
 Paul Hallet - Creation of pokeapi
