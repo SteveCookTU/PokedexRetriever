@@ -49,6 +49,9 @@ class PokedexRetriever {
                 displayCurrentMenu();
             }
         } else {
+            if(input.equalsIgnoreCase("exit")) {
+                return;
+            }
             do {
                 clearConsole();
                 System.out.print(current + "Please select a menu item by number: ");
